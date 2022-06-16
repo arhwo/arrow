@@ -107,6 +107,37 @@
           }
         }
       }
+    },
+    "omni-sidenav": {
+      "projectType": "library",
+      "root": "projects/omni-sidenav",
+      "sourceRoot": "projects/omni-sidenav/src",
+      "prefix": "aro",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/omni-sidenav/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/omni-sidenav/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/omni-sidenav/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/omni-sidenav/src/test.ts",
+            "tsConfig": "projects/omni-sidenav/tsconfig.spec.json",
+            "karmaConfig": "projects/omni-sidenav/karma.conf.js"
+          }
+        }
+      }
     }
   },
   "defaultProject": "arrow"
