@@ -4,3 +4,4 @@
 
 export * from './lib/omni-sidenav.service';
 export * from './lib/omni-sidenav.module';
+export * from './lib/omni-drawer/omni-drawer.component';
